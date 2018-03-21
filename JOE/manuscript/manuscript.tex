@@ -445,13 +445,11 @@
 % make the title area
 \maketitle
 
-% As a general rule, do not put math, special symbols or citations
-% in the abstract or keywords.
 \begin{abstract}
-Baseline ambient sound level assessment is important in quantifying anthropogenic noise contributions. Static acoustic sensing in high-flow conditions is complicated by pseudo-sound, or flow noise, caused by turbulent flow on the surface of a hydrophone. Signal processing methods are used to identify and suppress flow noise at low frequencies ($<$ 500 Hz) in data collected on a four-element horizontal hydrophone array in Minas Passage, a tidal channel in the Bay of Fundy, in October 2016. Spectral slope analysis is used to identify the frequencies at which the flow noise and ambient noise contributions to the recorded signal are equal. The maximum frequencies at which flow noise is observed is determined using analysis of the spatial coherence.  The array's performance in the Minas Passage is quantified by an empirical relationship between flow speed and the spectral critical frequencies of the coherent output from the linear array. Coherent averaging (broadside beamforming) is demonstrated as an effective flow noise suppression technique, improving low-frequency passive acoustic monitoring in a high-energy tidal channel. %Beamforming is proposed as a possible flow noise suppression method and evaluated.
+Baseline ambient sound level assessment is important in quantifying anthropogenic noise contributions. Static acoustic sensing in high-flow conditions is complicated by pseudo-sound, or flow noise, caused by turbulent flow on the surface of a hydrophone. Signal processing methods are used to identify and suppress flow noise at low frequencies ($<$ 500 Hz) in data collected on a four-element horizontal hydrophone array in Minas Passage, a tidal channel in the Bay of Fundy, in October 2016. Spectral slope analysis is used to identify the frequencies at which the flow noise and ambient noise contributions to the recorded signal are equal. The maximum frequencies at which flow noise is observed is determined using analysis of the spatial coherence.  The array's performance in the Minas Passage is quantified by an empirical relationship between flow speed and the spectral critical frequencies of the coherent output from the linear array. Coherent averaging (broadside beamforming) is demonstrated as an effective flow noise suppression technique, improving low-frequency passive acoustic monitoring in a high-energy tidal channel. 
 \end{abstract}
 
-% Note that keywords are not normally used for peerreview papers.
+
 \begin{IEEEkeywords}
 Flow noise, ambient noise, array processing, tidal channel, and passive acoustic monitoring.
 \end{IEEEkeywords}
@@ -491,7 +489,6 @@ Flow noise, ambient noise, array processing, tidal channel, and passive acoustic
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
 \IEEEPARstart{T}{idal} power utilities are currently leasing seafloor space within the Minas Passage in the Bay of Fundy with aspirations of converting the energy of the region's tidal currents into electricity, a trend that has been supported by favorable projections of the Passage's tidal energy capacity \cite{karsten}. It is important that these companies follow sustainable industry practices as the sector grows. This includes the consideration of industry knowledge gaps, many of which are a consequence of the sector's immaturity \cite{inger}. The uncertainty surrounding the ecological and environmental implications of tidal turbine infrastructure is a particularly important knowledge gap and has qualified some opposition to turbine projects. 
-%Large-scale tidal turbine sites could pose physical risks to boats, swimmers, marine mammals, and fishes within tidal channels. The risk of turbine-human interaction can be mitigated with appropriate signage and conspicuous warnings. However, the prevention of physical contact between animals and tidal turbines is more challenging, and, in consequence, tidal turbines could seriously threaten local animals and regional ecosystem health .
 
 Tidal turbines present two environmental concerns: physical contact (or interaction) with marine life \cite{dadswell} \cite{redden} and acoustic pollution. Tidal turbines could become an important source of ambient noise in tidal channels through cavitation and motor or mechanical noise \cite{wang}. %Depending on the frequency and levels of turbine noise, 
 Turbine anthropophony could affect animal navigation, communication, predator-prey detections \cite{lombardi}, and marine life cycles \cite{pine}. Moreover, turbine-generated sound could be damaging to fish tissue \cite{halvorsen}. If substantive, these effects would threaten near-field and far-field ecosystem health, stressing the need for rigorous environmental impact assessments in the tidal power sector. 
@@ -503,9 +500,9 @@ Analogous to turbulent flowing air \cite{light}, flowing water in a high Reynold
 Turbulent flows occupy a wide range of frequencies and wavenumber domains, with broad spatial and temporal variability. The advective nonlinearity %and sensitivity 
 of turbulent flows makes them unpredictable in space and time, and contributes to their complex nature \cite{van}. As such, it is difficult to reliably model flow noise. Flow noise follows a spectral slope of $f^{-5/3}$ at low frequencies, behaviour that is analogous by Kolmogorov's turbulence theory. This flow noise is not to be confused with wind-generated noise that produces $f^{-5/3}$ spectral slopes at higher frequencies \cite{knud}. Bassett et al. \cite{bassett} identifies $f^{-5/3}$ flow noise below 20 Hz and also describes steepened spectral slopes, $f^{-m}$, between 20 and 200 Hz. Lombardi \cite{lombardi} identifies these steep spectral slopes in measurements from the Grand Passage tidal channel. The flow noise that produces $f^{-m}$ is a result of small-scale turbulence being averaged out across the surface of the hydrophones, which dampens (or reduces) measurements.
 
-Flow noise presents a unique challenge for passive acoustic monitoring (PAM): a hydrophone in a high-flow setting will record both propagating sound and pseudo-sound. This suggests that models  should distinguish between the two sound sources. Barclay and Buckingham \cite{barclaywind} describe the exploitation of ambient noise coherence and cross-correlation to address flow noise in deep sea signals. We adapt this application of coherence to identify and suppress flow noise across a four-element array in a tidal channel.  %in deep ocean ambient signals. Additionally, mechanical solutions such as flow shields and hydrophone design can be used to suppress pressure fluctuations on the surface of a hydrophone.% However, these solutions are relatively unrefined.
+Flow noise presents a unique challenge for passive acoustic monitoring (PAM): a hydrophone in a high-flow setting will record both propagating sound and pseudo-sound. This suggests that models  should distinguish between the two sound sources. Barclay and Buckingham \cite{barclaywind} describe the exploitation of ambient noise coherence and cross-correlation to address flow noise in deep sea signals. We adapt this application of coherence to identify and suppress flow noise across a four-element array in a tidal channel.  
 
-Successful suppression of flow noise could benefit PAM systems in relatively energetic environments. %Additionally, improved ambient sensing in high-flow conditions would enhance our understanding of underwater ambient sound fields. 
+Successful suppression of flow noise could benefit PAM systems in relatively energetic environments.
 The objectives of the present research are: 
 \begin{enumerate}
 \item Use spectral analysis and spatial coherence to identify and characterize flow noise at low frequencies ($<$ 500 Hz).
@@ -513,13 +510,14 @@ The objectives of the present research are:
 \end{enumerate}
 
 This paper is organized as follows. Section II discusses important field work details, including an experiment description and instrumentation summary. Section III describes all relevant signal processing, with emphasis on spectral analysis, spatial coherence, and beamforming. Section IV presents the signal processing and data analysis results. Section V evaluates the results and identifies areas for future work. Lastly, Section VI summarizes the findings of the study in a series of conclusions.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 \section{Field Work}
 \label{II}
-
-%depth between 40-60 meters
-%ambient field sources are in your thesis
-%interference from experiment equipment
 
 Field work was completed on October 27, 2016, near the Fundy Ocean Research Center for Energy (FORCE) site in the Minas Passage of the Bay of Fundy. The FORCE site depth ranges between 40 and 60 meters depending on the tide. The deployment period spanned roughly four hours, from 12:00 ADT to 16:00 ADT. This experimental window captured the transition from ebb tide to slack tide. Wind speed was measured intermittently throughout the deployment period using a hand-held wind speed gauge. Tidal and flow data was generated using a WebTide model \cite{webtide}. 
 
@@ -540,21 +538,18 @@ The GuardBuoy signals are assumed to be free of flow noise and were used as benc
 
 \subsection{Instrumentation}
 The linear array is an oil-filled array with a rigid exterior and acoustically transparent outer skin. It contains four sequentially spaced hydrophones with a horizontal configuration along the axis of the array. The array and the hydrophones were constructed by GeoSpectrum Technologies. Each neighbouring hydrophone is separated by a distance $d$ = 17cm. The array hydrophones were set to simultaneously sample at a rate of 96 kHz with an acoustic bandwidth of 48.019 kHz.
-The four channels on the array continuously recorded 10 minute WAV files over a 4 hour period. Power spectra were calibrated to dB re 1 $\mu$Pa according to frequency-dependent sensitivities supplied by the manufacturer.
-%\begin{figure}[!t]
-%	\begin{center}
-%		%\includegraphics[width=21pc]{array.eps} % ask yourself what suffix is being used ...
-%		\includegraphics[width=0.7\textwidth]{array.eps} % ask yourself what suffix is being used ...
-%	\end{center}
-%	\caption[Schematic overview of hydrophone array]{
-%	\label{f:array_scheme}
-%	Schematic view of linear array. Hydrophones, $h$, and the separation distance, $d$, are labelled.}
-%\end{figure}
-The GuardBuoy sampled at a rate of 96 kHz with an acoustic bandwidth of 48 kHz, and was equipped with a GPS to record transect geospatial information. The Guard Buoy recorded WAV files in 30 minute segments. Corresponding power spectra were converted to dB re 1 $\mu$Pa according to frequency-dependent sensitives supplied by the manufacturer. 
+The four channels on the array continuously recorded 10 minute WAV files over a 4 hour period. Power spectra were calibrated to dB re 1 $\mu$Pa according to frequency-dependent sensitivities supplied by the manufacturer. The GuardBuoy sampled at a rate of 96 kHz with an acoustic bandwidth of 48 kHz, and was equipped with a GPS to record transect geospatial information. The Guard Buoy recorded WAV files in 30 minute segments. Corresponding power spectra were converted to dB re 1 $\mu$Pa according to frequency-dependent sensitives supplied by the manufacturer. 
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 \section{Data Analysis}
 \label{III}
-Data analysis was performed in MATLAB in several stages. The analysis began with the calculation of the power spectral density (PSD) from the raw WAV files, followed by spectral analysis, spatial coherence analysis, and broadside beamforming. %Quantitative evaluation of the results facilitated description of the flow and ambient noise recorded during the deployment period. 
+Data analysis was performed in MATLAB in several stages. The analysis began with the calculation of the power spectral density (PSD) from the raw WAV files, followed by spectral analysis, spatial coherence analysis, and broadside beamforming. 
 
 
 
@@ -610,7 +605,7 @@ The local spectral slope is defined as
 -M = \frac{S_{ii}(2\pi f_a) - S_{ii}(2\pi f_b)}{\log(f_a \cdot f_b^{-1})}
 \label{slope}
 \end{align}
-where $S_{ii}(2\pi f_a)$ is the spectral density on the $i$th sensor at frequency $f_a$ and $S_{ii}(2\pi f_b)$ is the spectral density on the $i$th sensor at frequency $f_b$. \eqref{slope} describes the spectral slope in dB/decade. %$f^{-m}$ from \cite{bassett} is found using \eqref{slope}.% between 10 Hz and 40 Hz  ($a = 10$ Hz, $b = 40$ Hz).
+where $S_{ii}(2\pi f_a)$ is the spectral density on the $i$th sensor at frequency $f_a$ and $S_{ii}(2\pi f_b)$ is the spectral density on the $i$th sensor at frequency $f_b$. \eqref{slope} describes the spectral slope in dB/decade. 
 
 The transition from the flow noise region of $f^{-m}$ to the ambient noise region is marked by the frequency knee, where the spectral slope begins to shallow. That is, the exit from the flow noise region is marked by a deviation below the slope $f^{-m}$. Here, the spectral critical frequency, $f_c$, is defined as the first frequency at which 
 
@@ -643,8 +638,8 @@ Here, $d_{ij}$ is the separation distance between the $i$th and $j$th hydrophone
 |\Gamma_{ij}(\omega^\prime)|\geq  0.9\cdot G_{ij}(\omega^\prime)
 \label{crit_coh}
 \end{align}
-is true. %Here, $G_{ij}$ is the empirical spatial coherence threshold, unique for each hydrophone pair. 
-We can be confident that any coherence within 10\% of \eqref{theoretical_coherence} is real and significant while any drop below the threshold given by the right hand side of \eqref{crit_coh} is caused by the addition of flow-generated incoherent noise. %This spatial coherence threshold method facilitates the identification of the coherence critical frequency. 
+is true. 
+We can be confident that any coherence within 10\% of \eqref{theoretical_coherence} is real and significant while any drop below the threshold given by the right hand side of \eqref{crit_coh} is caused by the addition of flow-generated incoherent noise. 
 This automated critical frequency detector corresponds to a coherence threshold of $\sim$ 0.9. The use of a more sophisticated noise model such as Cron and Sherman \cite{cron} or Deane et al. \cite{deane} in the place of \eqref{theoretical_coherence} yields a nearly identical threshold.
 
 
@@ -815,9 +810,8 @@ Early in the deployment (around 10 minutes) electronic noise in the system raise
 
 
 \begin{figure}[H]
-	\begin{center}
-		%\includegraphics[width=21pc]{result1.eps} % ask yourself what suffix is being used ...
-		\includegraphics[width=0.65\textwidth]{figure1.eps} % ask yourself what suffix is being used ...
+	\begin{center}	
+		\includegraphics[width=0.65\textwidth]{figure1.eps} 
 	\end{center}
 	\caption[Hydrophone power spectra]{
 	\label{f:power}
@@ -825,8 +819,7 @@ Power spectrum for channel 0 on the array (a). The spectrum is plotted over the 
 \end{figure}
 \begin{figure}[H]
 	\begin{center}
-		%\includegraphics[width=21pc]{result2.eps} % ask yourself what suffix is being used ...
-		\includegraphics[width=0.7\textwidth]{figure2.eps} % ask yourself what suffix is being used ...
+		\includegraphics[width=0.7\textwidth]{figure2.eps} 
 	\end{center}
 	\caption[Power spectrum probability density]{
 	\label{f:lines}
@@ -838,45 +831,41 @@ Power spectrum for channel 0 on the array (a). The spectrum is plotted over the 
 Spectral slopes were calculated between 40 and 100 Hz for each minute of deployment using \eqref{slope}. The linear relationship between spectral slope, $m$, and current speed, $u$, (Fig. \ref{f:slopes}) indicates that signals recorded in decreasing flow are increasingly dampened (steepened slope). The inverse relationship between current speed and spectral slope suggests that signals are less dampened in fast flowing water, a result of larger turbulence scales. The spectral slopes observed between 40 and 100 Hz range from -25 to -60 dB/decade. The correlation coefficient, R, indicates that there is a meaningful correlation between spectral slope and current.
 \begin{figure}[!t]
 	\begin{center}
-		%\includegraphics[width=21pc]{result3.eps} % ask yourself what suffix is being used ...
-		\includegraphics[width=0.7\textwidth]{figure3.eps} % ask yourself what suffix is being used ...
+		\includegraphics[width=0.7\textwidth]{figure3.eps} 
 	\end{center}%
 	\caption[Spectral slope current speed dependence]{
 	\label{f:slopes}
 	Relationship between spectral slope, $m$, and current speed, $u$, between 40 and 100 Hz for channel 0. Spectral slope magnitude increases with decreasing flow. The correlation coefficient, R, is reported. }
 \end{figure}
-%Theories from Knudsen and Kolmogorov suggest that the spectral slope of -17 dB/decade corresponds to wind-generated and turbulence-generated noise, respectively. 
-%The relationship between spectral slope and flow speed holds for currents at 2.5 m/s (maximum measured). 
+
 
 The spectral critical frequency was calculated for each minute of deployment using \eqref{fc}. These critical frequencies were regressed against current speed, as shown in Fig. \ref{f:thresh}. There is a positive correlation between spectral critical frequency and current speed, where fast flow coincides with high spectral critical frequencies. The spectral critical frequency is the frequency at which flow noise and ambient noise are equal in power. 
 
-The intercepts have not been forced to zero. This is because it is unrealistic to expect that we can completely eliminate flow noise, or low-frequency noise generated by the mechanical systems that comprise the tow body. If this were a moored system with no surface expression, that assumption might be valid, but is not considered here. %Critical frequency is a quantitative indicator of flow noise prevalence, where higher critical frequencies imply more pervasive flow noise. As such, the spectral slope critical frequency method is used to track the transition from the flow noise region to the ambient noise region. 
+The intercepts have not been forced to zero. This is because it is unrealistic to expect that we can completely eliminate flow noise, or low-frequency noise generated by the mechanical systems that comprise the tow body. If this were a moored system with no surface expression, that assumption might be valid, but is not considered here. 
 \begin{figure}[!t]
 	\begin{center}
-		%\includegraphics[width=21pc]{result4.eps} % ask yourself what suffix is being used ...
-		\includegraphics[width=0.7\textwidth]{figure4.eps} % ask yourself what suffix is being used ...
+		\includegraphics[width=0.7\textwidth]{figure4.eps}
 	\end{center}
 	\caption[Spectral slope thresholding results]{
 	\label{f:thresh}
 	Relationship between spectral critical frequency, $f_c$, and current speed, $u$, for channel 0. Spectral critical frequency marks where the flow noise and ambient noise contributions to the recorded signal are equal, and increases with current speed. Correlation coefficients, R, are reported.}
 \end{figure}
-%The linear relationship between spectral slope critical frequency and current speed is ascertained with the correlation coefficient, R. As the results show, the correlation is significant, though disagreement between the fit for each channel is large since outliers are included in the regressions. Importantly, the intercepts have not been forced to zero. This is because it is unrealistic to expect that we can completely eliminate flow noise, or low-frequency noise generated by the mechanical systems that comprise the tow body. If this were a moored system with no surface expression, that assumption might be valid, but is not considered here. 
+
 
 
 
 \subsection{Spatial Coherence}
-Spatial coherence is calculated for different hydrophone combinations across the linear array using \eqref{coherence}. The spatial coherence results are presented in magnitude coherence for the entire deployment period (Fig. \ref{f:coherence}). %Coherence is a measure of the similarity between the signals recorded on two hydrophones.
+Spatial coherence is calculated for different hydrophone combinations across the linear array using \eqref{coherence}. The spatial coherence results are presented in magnitude coherence for the entire deployment period (Fig. \ref{f:coherence}). 
 \begin{figure}[!t]
 	\begin{center}
-		%\includegraphics[width=21pc]{result5.eps} % ask yourself what suffix is being used ...
-		\includegraphics[width=0.7\textwidth]{figure5.eps} % ask yourself what suffix is being used ...
+		\includegraphics[width=0.7\textwidth]{figure5.eps}
 	\end{center}
 	\caption[Hydrophone spatial coherence]{
 	\label{f:coherence}
 	Spatial coherence over the experimental period. Magnitude coherence is expected to tend to unity as the fixed hydrophones become relatively co-located. However, uncorrelated flow noise on each phone breaks that relationship. The extent of incoherent flow noise increases with current speed. Channel 0 - 1 (a) and 0 - 3 (b) are shown as examples. Results hold to all other channel combinations.}
 \end{figure}
-%One important feature of the spatial coherence results relates to the relationship between wavelength and hydrophone co-location. 
-If the wavelength of propagating sound is sufficiently long (frequency sufficiently low) the sensors would become relatively co-located and the coherence would tend to unity. %That is, long-wavelength sound would generate high coherence between proximal elements. 
+
+If the wavelength of propagating sound is sufficiently long (frequency sufficiently low) the sensors would become relatively co-located and the coherence would tend to unity. 
 However, the results suggest that the low frequency data is overwhelmingly incoherent, since the locally generated flow noise is incoherent from one hydrophone to the next. 
 
 Flow noise is uncorrelated and propagating ambient noise is highly correlated at low frequencies. As a result, low coherence and high coherence are a sign of flow noise and ambient noise, respectively. Therefore, the spatial coherence results are partitioned into two distinct regions: a flow noise region and an ambient noise region. Visual assessment suggests that flow noise is consistently present at low frequencies and can be prominent at higher frequencies (above 600 Hz). The ambient noise region is present between 200 and 600 Hz and contains the same vessel noise identified in Fig. \ref{power}. 
@@ -886,35 +875,31 @@ Flow noise is uncorrelated and propagating ambient noise is highly correlated at
 \subsection{Coherence Critical Frequency}
 \begin{figure}[!t]
 	\begin{center}
-		%\includegraphics[width=21pc]{result6.eps} % ask yourself what suffix is being used ...
-		\includegraphics[width=0.7\textwidth]{figure6.eps} % ask yourself what suffix is being used ...
+		\includegraphics[width=0.7\textwidth]{figure6.eps}
 	\end{center}%
 	\caption[Spatial coherence thresholding results.]{
 	\label{f:c_thresh}
-	Relationship between coherence critical frequency, $f^\prime_c$, and current speed, $u$, for channels 0 - 1. Coherence critical frequency is the highest frequency at which flow noise can be detected, and increases with current speed. }%Coherence critical frequency is used to detect the critical frequency in a more precise way than the spectral approach.}
+	Relationship between coherence critical frequency, $f^\prime_c$, and current speed, $u$, for channels 0 - 1. Coherence critical frequency is the highest frequency at which flow noise can be detected, and increases with current speed. }
 \end{figure}
 The coherence critical frequency is the highest frequency at which flow noise can be detected. The coherence critical frequency was calculated for each minute of deployment for each combination of channels, and is used to quantify the relative prevalence of flow noise and ambient noise within a measurement (Fig. \ref{f:c_thresh}). The coherence critical frequency is a more sensitive method of flow noise measurement than the spectral critical frequency, as spatial coherence is used as an indicator of flow noise cessation rather than relative noise contributions. The coherence critical frequency increases with increasing flow speed, a relationship similar to that of the spectral critical frequency. 
 
-It is important to note that the coherence is impacted by any temporary deterministic noises present in the sound field, such as the auxiliary RHIB, mechanical array noise, or noise generated aboard the \emph{MV Nova Endeavour}. In such instances, the automated coherence critical frequency detector fails, and yields an outlier. These outliers have been removed.%Such outliers could be the source of the low correlation between channels 1-2  and 2-3. 
+It is important to note that the coherence is impacted by any temporary deterministic noises present in the sound field, such as the auxiliary RHIB, mechanical array noise, or noise generated aboard the \emph{MV Nova Endeavour}. In such instances, the automated coherence critical frequency detector fails, and yields an outlier. These outliers have been removed.
 
-%There is a good deal of noise in Fig. \ref{f:c_thresh}, as no outliers nor oddities were discarded. The retention of outliers is done to maintain the integrity of the linear regression and the correlation present. %This makes the regression statistically rigorous and suggests that the correlation is meaningful.
 
 
 
 \subsection{Beamforming}
 The spectral critical frequency of the coherent array output is compared to the fixed single hydrophone spectral and coherence critical frequencies in Fig. \ref{f:array_perform}. 
-%The beamforming algorithm applied across the array is defined in in Equation \ref{A}, and generates an array power spectrum that can be analyzed using Equation \ref{fc} to identify the spectral slope critical frequencies of the coherent array. The coherent array critical frequency, average spectral critical frequency, and average coherence critical frequency distributions were regressed against current conditions, as shown in Figure \ref{f:array_perform}. 
 The standard deviations of the spectral slope and spatial coherence critical frequency regressions were extracted from the averaged fits, while the standard deviation of the coherent array critical frequency regression was calculated from the data during the regression.
 
 The coherence critical frequencies are relatively high, while spectral critical frequencies (both fixed single hydrophone and coherent array) are relatively low. This is attributed to the more sensitive nature of the coherence-based method. Above coherence critical frequencies we can be confident that there is no contamination of the ambient noise field by flow noise. Conversely, the fixed single hydrophone and coherent array spectral critical frequencies show where flow noise and ambient noise have equal power. The coherence and spectral critical frequencies serve as the respective upper and lower bounds of different noise regimes. Importantly, the coherent array output contains lower critical frequencies than the fixed single hydrophone, indicating that the broadside beamforming approach lessens the extent of flow noise within the measurements. 
 
-%Consideration of the power spectra of the coherently averaged array facilitates the visual assessment of the performance of the beamforming algorithm described in Equation \ref{A}. 
+
 Fig. \ref{f:comparison} compares GuardBuoy, fixed single hydrophone, and horizontal coherent array power spectra at 1.5 hours into the experiment. We select a time where the drifter and array were in close proximity to establish a meaningful comparison.
-%Different combinations of hydrophone numbers are processed with the beamforming algorithm to evaluate the marginal acoustical benefits of adding hydrophones to an array. 
+
 \begin{figure}[!t]
 	\begin{center}
-		%\includegraphics[width=21pc]{result7.eps} % ask yourself what suffix is being used ...
-		\includegraphics[width=0.7\textwidth]{figure7.eps} % ask yourself what suffix is being used ...
+		\includegraphics[width=0.7\textwidth]{figure7.eps}
 	\end{center}
 	\caption[Comparison of spectral sloping and spatial coherence thresholding]{
 	\label{f:array_perform}
@@ -922,52 +907,45 @@ Fig. \ref{f:comparison} compares GuardBuoy, fixed single hydrophone, and horizon
 \end{figure}
 \begin{figure}[!t]
 	\begin{center}
-		%\includegraphics[width=21pc]{result8.eps} % ask yourself what suffix is being used ...
-		\includegraphics[width=0.7\textwidth]{figure8.eps} % ask yourself what suffix is being used ...
+		\includegraphics[width=0.7\textwidth]{figure8.eps} 
 	\end{center}
 	\caption[Comparison of hydrophone, coherent array, and guard buoy signals]{
 	\label{f:comparison}
 	Comparison of fixed single hydrophone (red), coherent array (black), and free drifting hydrophone (blue) signal power spectra at 1.5 hr into the deployment. The current speed at this moment was 2.2 m/s. A and B indicate the spectral critical frequencies of the coherent array and the fixed single hydrophone, respectively. The reduced levels and spectral critical frequency of the coherent array output relative to the fixed single hydrophone indicates effective flow noise suppression.  }
 \end{figure}
-%The spectra are selected based on the drifter's distance from the \emph{MV Nova Endeavour} and the timestamps of each transect. 
 
 The GuardBuoy spectrum behaves differently from the rest, exhibiting lower levels at frequencies below 100 Hz. A pronounced excursion in spectral slope is present at 10 Hz in the GuardBuoy spectrum, suggesting non-negligible flow noise is affecting the drifter's low-frequency measurements. This is typical of all moored or free drifting passive acoustic systems that have a surface expression or subsurface float. The fixed single hydrophone shows clear symptoms of flow noise at low frequencies. 
 
-The spectra reveal that the coherent array spectra transitions to the ambient noise region at lower frequencies than the fixed single hydrophone. %Furthermore, there exists a sequential hydrophone-critical frequency relationship, where the array signals adding hydrophones lowers the measured signal levels below the critical frequency. 
-Furthermore, the coherent array signals are quieter than the fixed single hydrophone signals at all low frequencies, demonstrating the effective suppression of flow noise. %This is evidenced by the downward shift in signal power frequency as more hydrophones are averaged/beamformed. 
-There is reasonable agreement between the GuardBuoy and coherent array above the critical frequency, with some difference above 700 Hz. This disparity is attributed to the lack of co-location between the array and the GuardBuoy, as they are vertically and horizontally displaced relative to each other.% Coherent averaging across the array does not seem to jeopardize signal variability. 
+The spectra reveal that the coherent array spectra transitions to the ambient noise region at lower frequencies than the fixed single hydrophone. 
+Furthermore, the coherent array signals are quieter than the fixed single hydrophone signals at all low frequencies, demonstrating the effective suppression of flow noise. 
+There is reasonable agreement between the GuardBuoy and coherent array above the critical frequency, with some difference above 700 Hz. This disparity is attributed to the lack of co-location between the array and the GuardBuoy, as they are vertically and horizontally displaced relative to each other.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 
 
 
 \subsection{Spectral Critical Frequency}
-%Iterative calculations of spectral slopes between 10 and 100 Hz, $f^{-m}$, were regressed against current speed. The resulting spectral slopes are far steeper than $f^{-5/3}$, the classic wind and turbulence spectral slope. These steepened slopes are a result of the averaging out of small-scale turbulence over the sensors, and have previously been identified by both \cite{lombardi} and \cite{bassett}. %There is visible interchannel variability in the relationship between the spectral slope and local current conditions. This is a result of the mechanical nature of the array and its interaction with fluid flow - as phones placed at different parts along the array have small but non-negligible differences in their interaction with the turbulent flow. Additionally, the natural randomness of turbulence would lend itself to the different linear relationships observed. Nonetheless, 
-%Evidently, there is a strong relationship between spectral slope and flow speed. 
+Results show that critical frequency and flow speed are positively related, giving the intuitive result that flow noise is prevalent in fast current conditions. 
+The spectral critical frequency presents a method of identifying flow noise prevalence within a signal. 
 
-%These spectral slopes were used in Equation \ref{fc} to identify critical frequency and quantify the prevalence of flow noise within a measured signal. 
-Results show that critical frequency and flow speed are positively related, giving the intuitive result that flow noise is prevalent in fast current conditions. %This is intuitive, as flow noise and current speed are intimately related. 
-The spectral critical frequency presents a method of identifying flow noise prevalence within a signal. %As such, the spectral slope critical frequency results could lead to improvements in flow noise models. %, and contribute to our ability to predict the shape and levels of flow noise in a tidal channel.
-
-%Spectral critical frequencies describe the transition from a flow noise region to an ambient noise region. 
 The spectral critical frequency marks where ambient noise and flow noise have equal power, and provides two important insights. Firstly, frequencies above the spectral critical frequency will contain a mixture of ambient noise and flow noise. Secondly, frequencies below the spectral critical frequency will be dominated by flow noise, since measurements in these frequencies contain spectral slopes that align with turbulence theory. These insights are important, as they provide useful context for future signal level and sound-source evaluations in tidal channel measurements. 
 
 
 
-\subsection{Spatial Coherence}%%
-%Spatial coherence evaluates the agreement between two sensors. 
-Spatial coherence results for different sensor combinations show that there are two distinct coherence regions across the array: an incoherent flow noise region and a coherent ambient noise region. The prevalence of these regions is quantified with the coherence critical frequency. %described in Equation \ref{crit_coh}. 
-Iterative calculations of the coherence critical frequency were regressed against current speed. There is a positive relationship between coherence critical frequency and current speed. The coherence critical frequency marks the frequency above which flow noise is absent. %That is, the spatial coherence critical frequency marks the boundary between pure ambient noise and a mixture of ambient and flow noise. 
+\subsection{Spatial Coherence}
+Spatial coherence results for different sensor combinations show that there are two distinct coherence regions across the array: an incoherent flow noise region and a coherent ambient noise region. The prevalence of these regions is quantified with the coherence critical frequency. 
+Iterative calculations of the coherence critical frequency were regressed against current speed. There is a positive relationship between coherence critical frequency and current speed. The coherence critical frequency marks the frequency above which flow noise is absent. 
 
 The spectral critical frequency provides a lower boundary, below which ambient noise is negligible, and the coherence critical frequency provides an upper boundary, above which flow noise is negligible. Frequencies between these bounds contain a mixture of flow noise and ambient noise. This explains why the coherence critical frequencies are noticeably higher than those of the spectral method. The application of spectral and coherence critical frequencies provides insight on the relative extent of both ambient noise and flow noise within a signal. 
 
 
 
 \subsection{Beamforming}
- By effectively treating the array as one sensor or hydrophone, signal processing can address the pseudo-sound within low frequency data. % Coherently averaging hydrophones suppresses uncorrelated data and enhances the measurement of common signatures. Thus, 
+ By effectively treating the array as one sensor or hydrophone, signal processing can address the pseudo-sound within low frequency data. 
 Coherent averaging suppresses flow noise and enhances the detection of propagating ambient noise. The coherent averaging employs a broadside approach with no steering angle \eqref{A}. 
 
-%The result of the broadside beamforming is a coherent array spectrum, not unlike Figure \ref{f:power}. Application of spectral slope thresholding (Equation \ref{fc}) to the coherent array spectrum reveals that the broadside beamforming has a substantial effect on the noise composition of the array spectra. 
 The results of the spectral critical frequencies derived from the the beamformed array are shown in Fig. \ref{f:array_perform}. Evidently, the coherent array contains lower levels and lower critical frequencies than the fixed single hydrophone (Fig. \ref{f:array_perform}; Fig. \ref{f:comparison}). This implies that the coherent array is less affected by flow noise, and contains a greater extent of ambient noise. 
 
 %Further research would help support the findings of this project. This includes longer testing periods, experimentation in different flow conditions, and tests in different bathymetric settings. Elimination of the mechanical noise floor would strengthen the present research. It would also be advantageous to conduct tests with arrays of different length and a varied number of elements.%A sequential relationship arises between array performance and the number of elements on the array, such that an increasing number of elements improves signal levels below the critical frequency. As such, a larger and more populated array is expected to further suppress a measurement's flow noise components. 
@@ -976,6 +954,8 @@ The results of the spectral critical frequencies derived from the the beamformed
 Flow noise appears as: $f^{-5/3}$ noise when wavelength $>>$ sensor size, and $f^{-m}$ noise, where the sensor's finite dimension reduces the flow noise. $f^{-m}$ is related to the flow speed over the array. The spectral critical frequency is used to identify where ambient noise is negligible and the coherence critical frequency is used to identify where flow noise is negligible. 
 
 Coherent processing (beamforming) suppresses flow noise and yields a lower spectral critical frequency than that of a fixed single hydrophone. An increased number of hydrophones and array length could improve array performance.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
